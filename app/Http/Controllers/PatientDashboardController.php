@@ -12,14 +12,14 @@ use Illuminate\Http\Request;
 
 class PatientDashboardController extends Controller
 {
-    // Show all patients
+    // patients
     public function index()
     {
         $patients = Patient::with(['appointments', 'medicalRecords', 'symptoms', 'testResults'])->paginate(10);
         return view('patients.index', compact('patients'));
     }
     
-    // Show single patient dashboard
+    // patient dashboard
     public function show(Patient $patient)
     {
         $appointments = $patient->appointments()->with('doctor')->orderBy('appointment_date', 'desc')->get();
@@ -30,14 +30,14 @@ class PatientDashboardController extends Controller
         return view('patients.dashboard', compact('patient', 'appointments', 'medicalRecords', 'symptoms', 'testResults'));
     }
     
-    // Show appointment creation form
+    // appointment creation form
     public function createAppointment(Patient $patient)
     {
         $doctors = Doctor::all();
         return view('appointments.create', compact('patient', 'doctors'));
     }
     
-    // Store appointment
+    // appointment
     public function storeAppointment(Request $request, Patient $patient)
     {
         $validated = $request->validate([
@@ -56,7 +56,7 @@ class PatientDashboardController extends Controller
             ->with('success', 'Appointment created successfully!');
     }
     
-    // Show all appointments
+    
     public function appointments()
     {
         $appointments = Appointment::with(['patient', 'doctor'])
@@ -65,7 +65,7 @@ class PatientDashboardController extends Controller
         return view('appointments.index', compact('appointments'));
     }
     
-    // Show all medical records
+    // medical records
     public function medicalRecords()
     {
         $medicalRecords = MedicalRecord::with(['patient', 'doctor'])
@@ -74,7 +74,7 @@ class PatientDashboardController extends Controller
         return view('medical-records.index', compact('medicalRecords'));
     }
     
-    // Show all symptoms
+    // symptoms
     public function symptoms()
     {
         $symptoms = Symptom::with('patient')
@@ -83,7 +83,7 @@ class PatientDashboardController extends Controller
         return view('symptoms.index', compact('symptoms'));
     }
     
-    // Show all test results
+    // test results
     public function testResults()
     {
         $testResults = TestResult::with(['patient', 'doctor'])
