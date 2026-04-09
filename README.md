@@ -18,6 +18,8 @@ npm install
 
 copy .env.example or cp .env.example .env
 
+php artisan key:generate
+
 
 **4. Run Database Setup:**
 
