@@ -32,6 +32,10 @@ npm run dev
 
 php artisan serve
 
+**6. Visit the page:**
+
+visit the page on (localhost)/login
+
 
 ## DEFAULT LOGIN CREDENTIALS:
 
