@@ -14,7 +14,7 @@ composer install
 npm install
 
 
-**3. Configure Environment:**
+**3. Configure Environment (.env):**
 
 copy .env.example or cp .env.example .env
 
