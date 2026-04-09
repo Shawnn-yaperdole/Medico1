@@ -14,16 +14,22 @@ npm install
 
 **3. Configure Environment:**
 
-copy .env.example/cp .env.example .env
+copy .env.example
+
+or
+
+cp .env.example .env
 
 **4. Run Database Setup:**
 
 php artisan migrate
+
 php artisan db:seed
 
 **5. Build assets and serve:**
 
 npm run dev
+
 php artisan serve
 
 ### DEFAULT LOGIN CREDENTIALS:
