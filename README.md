@@ -8,17 +8,16 @@ A comprehensive clinic management system built with Laravel for managing patient
 
 composer install
 
+
 **2. Install Node.js Dependencies:**
 
 npm install
 
+
 **3. Configure Environment:**
 
-copy .env.example
+copy .env.example or cp .env.example .env
 
-or
-
-cp .env.example .env
 
 **4. Run Database Setup:**
 
@@ -26,13 +25,15 @@ php artisan migrate
 
 php artisan db:seed
 
+
 **5. Build assets and serve:**
 
 npm run dev
 
 php artisan serve
 
-### DEFAULT LOGIN CREDENTIALS:
+
+## DEFAULT LOGIN CREDENTIALS:
 
 **Admin:**
 
