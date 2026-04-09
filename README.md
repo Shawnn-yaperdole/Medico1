@@ -22,9 +22,8 @@ npm run dev
 php artisan serve
 
 DEFAULT LOGIN CREDENTIALS:
-Role	      Email                  Password
-Admin	      admin@example.com	     password
-Doctor	      doctor@example.com	 password
-Receptionist  reception@example.com	 password
-Patient	      patient@example.com	 password
+Admin: admin@example.com, password
+Doctor: doctor@example.com, password
+Receptionist: reception@example.com, password
+Patient: patient@example.com, password
 
