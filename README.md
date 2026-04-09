@@ -2,7 +2,7 @@
 
 A comprehensive clinic management system built with Laravel for managing patients, doctors, appointments, medical records, and test results.
 
-STEPS AFTER CLONING AND TESTING
+# STEPS AFTER CLONING AND TESTING
 
 1. Install PHP Dependencies:
 composer install
@@ -21,7 +21,7 @@ php artisan db:seed
 npm run dev
 php artisan serve
 
-DEFAULT LOGIN CREDENTIALS:
+# DEFAULT LOGIN CREDENTIALS:
 
 Admin: 
 admin@example.com, password
