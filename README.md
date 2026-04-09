@@ -22,6 +22,7 @@ npm run dev
 php artisan serve
 
 DEFAULT LOGIN CREDENTIALS:
+
 Admin: 
 admin@example.com, password
 
